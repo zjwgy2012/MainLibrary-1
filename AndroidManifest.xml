@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.mobilelibrary"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk android:minSdkVersion="8" />
+
+    <!-- Config permission here -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.READ_LOGS" >
+    </uses-permission>
+
+    <application
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name" >
+
+        <!-- Config activity here -->
+        <activity
+            android:name=".activity.StartActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".activity.MainTabActivity" />
+        <activity android:name=".activity.MainPageActivity" />
+        <activity android:name=".activity.SearchActivity" />
+        <activity android:name=".activity.OtherActivity" />
+        <activity android:name=".activity.ModiPwdActivity" />
+        <activity android:name=".activity.BookBorrowRecordActivity" />
+        <activity android:name=".activity.AboutActivity" />
+        <activity android:name=".activity.BookShelfActivity" />
+        <activity android:name=".activity.PersonInformation" />
+        <activity android:name=".activity.BookBorrowedActivity" />
+        <activity android:name=".activity.LoginActivity" />
+        <activity android:name=".activity.BookInfoActivity" />
+
+        <!-- Umeng Support -->
+        <activity
+            android:name="com.umeng.fb.ui.SendFeedback"
+            android:windowSoftInputMode="adjustResize" />
+        <activity android:name="com.umeng.fb.ui.FeedbackConversations" />
+        <activity
+            android:name="com.umeng.fb.ui.FeedbackConversation"
+            android:configChanges="keyboard" />
+        <!-- UmengSNS -->
+        <activity
+            android:name="com.umeng.api.activity.OauthActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="unspecified"
+            android:windowSoftInputMode="adjustResize" >
+        </activity>
+        <activity
+            android:name="com.umeng.api.activity.UpdateStatusActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="unspecified"
+            android:theme="@style/Theme.IOSched"
+            android:windowSoftInputMode="stateVisible|adjustResize" >
+        </activity>
+
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="4fcc1d9952701576640000e9" >
+
+            <!-- Config provider here -->
+            <provider
+                android:name=".provider.LibraryProvider"
+                android:authorities="MoblileLibraryAuthorities" />
+        </meta-data>
+    </application>
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+</manifest>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/bg_color"
+    android:orientation="vertical" >
+
+    <include 
+		layout="@layout/common_topbar" />
+
+    <ListView
+            android:id="@+id/lv_other"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@null"
+            android:cacheColorHint="#00000000"
+            android:listSelector="#00000000" />
+    
+    <Button
+                android:id="@+id/btn_quit"
+                android:layout_width="280dp"
+                android:layout_height="43dp"
+                android:layout_marginLeft="45dp"
+                android:layout_marginRight="45dp"
+                android:layout_marginTop="25dp"
+                android:background="@drawable/logout_btn_selector"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:text="@string/quit"
+                android:textColor="@android:color/white"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+    
+</LinearLayout>
